@@ -1,0 +1,45 @@
+<div class="container register-form col-md-12">
+    <div class="form">
+        <form  [formGroup]="editForm" (ngSubmit)="onSubmit()" >
+            <div class="note">
+                <p>Poliçe Kayıt Düzenleme Formu</p>
+            </div>
+
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="hidden">
+                            <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+                        </div>
+
+                        <div class="form-group">
+                            <input type = "text" formControlName="productName" name = "productName" placeholder = "Ürün Adı" >
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" formControlName="productType" name = "productType" placeholder = "Ürün Tipi" >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "text" formControlName="description" name = "description" placeholder = "Tanım" >
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" formControlName="expiry" name = "expiry" placeholder = "Vade" >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "text" formControlName="total" name = "total" placeholder = "Toplam Fiyat" >
+                        </div>
+                    </div>  
+                </div>
+                <input type = "submit" value = "Kaydet" class="btnSubmit">
+           
+            </div>
+        </form>
+    </div>
+</div>
+<app-customer-list-combo [editId]="editPolicyId"></app-customer-list-combo>
+<hr />
+<app-policy-customers></app-policy-customers>
+

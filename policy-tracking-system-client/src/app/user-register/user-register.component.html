@@ -1,0 +1,45 @@
+<div class="container register-form col-md-12">
+    <div class="form">
+        <form #login = "ngForm" (ngSubmit) = "onClickSubmit(login.value)" >
+            <div class="note">
+                <p>Kişi Kayıt Formu</p>
+            </div>
+
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "text" name = "firstName" placeholder = "Ad" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" name = "lastName" placeholder = "Soyad" ngModel>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="picker" name="birthDate" placeholder="Choose a date" ngModel>
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>    
+                        <div class="form-group">
+                            <input type = "text" name = "tckNumber" placeholder = "TC numarası" ngModel>
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "text" name = "phoneNumber" placeholder = "Telefon No" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" name = "address" placeholder = "Adres" ngModel>
+                        </div>
+                    </div>  
+                </div>
+                <input type = "submit" value = "Kaydet" class="btnSubmit">
+           
+            </div>
+        </form>
+    </div>
+</div>

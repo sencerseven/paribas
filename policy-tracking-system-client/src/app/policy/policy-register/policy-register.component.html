@@ -1,0 +1,41 @@
+<div class="container register-form col-md-12">
+    <div class="form">
+        <form #login = "ngForm" (ngSubmit) = "onClickSubmit(login.value)" >
+            <div class="note">
+                <p>Poliçe Kayıt Formu</p>
+            </div>
+
+        
+
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "text" name = "productName" placeholder = "Ürün Adı" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" name = "productType" placeholder = "Ürün Tipi" ngModel>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <div class="form-group">
+                            <input type = "text" name = "description" placeholder = "Tanım" ngModel>
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type = "number" name = "expiry" placeholder = "Vade" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <input type = "number" name = "total" placeholder = "Toplam" ngModel>
+                        </div>
+                    </div>  
+                </div>
+                <input type = "submit" value = "Kaydet" class="btnSubmit">
+           
+            </div>
+        </form>
+    </div>
+</div>
